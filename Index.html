@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aman 🎉</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  overflow: hidden;
+}
+
+/* 🌟 Card UI */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 2s ease;
+}
+
+/* 🎂 Text */
+h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 35px;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ✨ Glow */
+h1, h2 {
+  text-shadow: 0 0 15px #fff, 0 0 25px #ffcc00;
+}
+
+/* 🎈 Floating Balloons */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  animation: float 7s infinite ease-in;
+}
+
+.balloon:nth-child(1){left:10%; background:#ff4d4d;}
+.balloon:nth-child(2){left:30%; background:#4da6ff;}
+.balloon:nth-child(3){left:50%; background:#66ff66;}
+.balloon:nth-child(4){left:70%; background:#ff66cc;}
+.balloon:nth-child(5){left:90%; background:#ffaa00;}
+
+@keyframes float {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-120vh);}
+}
+
+/* 🎵 Button */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎈 Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<div class="card">
+  <h1>🎂 Happy Birthday 🎂</h1>
+  <h2>Aman 🎉🔥</h2>
+
+  <p>
+    Wishing you endless happiness 😄 <br>
+    Aur life me unlimited success 🚀 <br><br>
+    Bhagwan tumhe hamesha khush rakhe 🙏 <br>
+    Har sapna pura ho 💯 <br><br>
+
+    Lots of love & best wishes ❤️<br>
+    <b>– From Akash 😎🔥</b>
+  </p>
+
+  <!-- 🎵 Music -->
+  <audio id="music" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="btn" onclick="playMusic()">▶ Play Music</button>
+</div>
+
+<script>
+function playMusic() {
+  document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
